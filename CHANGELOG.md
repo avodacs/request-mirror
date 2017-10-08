@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - `x-forwarded-port`, `x-forwarded-for`, and `connection` headers are not displayed on inspection, to prevent showing headers added by HAProxy.
 - Updated favicon
 - Show both HTTP and HTTPS links on inspection page
+- Added Google Analytics
 
 ## [1.0.0] - 2017-10-08
 ### Added
