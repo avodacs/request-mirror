@@ -1,0 +1,70 @@
+extends layout
+
+block content
+  section(class='hero is-light')
+    div(class='hero-body')
+      div(class='container')
+        h1(class='title') Inspect
+        h2(class='subtitle') Token #{token}
+
+  //- URL textbox
+  div(class='container margin-bottom-2 margin-top-2')
+    div(class='field has-addons')
+      div(class='control has-icons-left is-expanded')
+        input(id='logUrl', class='input is-fullwidth', type='text', value=url, readonly)
+        span(class='icon is-small is-left')
+          i(class='fa fa-link')
+      div(class='control')
+        a(id='copyBtn' class='button is-info', data-clipboard-target='#logUrl')
+          i(class='fa fa-copy margin-right-1')
+          span Copy
+
+  //- Request Entries
+  div(id='app', class='container')
+
+    //- Request Template
+    div(class='box', v-if='requests', v-for='request in requests')
+      div(class='level request-header')
+        div(class='level-item level-left')
+          div
+            span(:class='getTag(request.method)', class='tag margin-right-1') {{ request.method }}
+            span(class='pre bold') {{ request.url }}
+        div(class='level-item level-right')
+          div(class='heading has-text-right')
+            p {{ request.timestamp }}
+            p {{ request.clientIp }}
+
+      //- Headers
+      div(v-if='request.headers')
+        p(class='heading') Headers
+        table(class='table is-striped is-fullwidth is-narrow is-bordered')
+          tbody
+            tr(v-for='header in Object.keys(request.headers)')
+              td(class='is-quarter') {{ header }}
+              td(class='pre') {{ request.headers[header] }}
+
+      //- Parameters
+      div(v-if='Object.keys(request.parameters)[0]')
+        p(class='heading') Parameters
+        table(class='table is-striped is-fullwidth is-narrow is-bordered')
+          tbody
+            tr(v-for='parameter in Object.keys(request.parameters)')
+              td(class='is-quarter') {{ parameter }}
+              td(class='pre') {{ request.parameters[parameter] }}
+
+      //- Body
+      div(v-if='Object.keys(request.body)[0]')
+        p(class='heading') Body
+        table(class='table is-striped is-fullwidth is-narrow is-bordered')
+          tbody
+            tr(v-for='body in Object.keys(request.body)')
+              td(class='is-quarter') {{ body }}
+              td(class='pre') {{ request.body[body] }}
+
+  input(id='token', type='text', value=token, class='hidden')
+
+  //- Scripts
+  script(src='https://unpkg.com/vue')
+  script(src='https://unpkg.com/axios/dist/axios.min.js')
+  script(src='//cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js')
+  script(src='/javascripts/inspect.js')

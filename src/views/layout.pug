@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    title Request Mirror
+
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+
+    link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.min.css')
+    link(rel='stylesheet', href='//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    nav(class='navbar is-dark')
+      div(class='navbar-brand')
+        a(class='navbar-item', href='/')
+          img(src='/images/logo.png')
+          p Request Mirror
+
+    block content
+
+    div(id='wrapper')
+    footer(class='footer margin-top-2')
+      div(class='container')
+        div(class='content has-text-centered')
+          p
+            <strong>Request Mirror</strong> by <a href="https://avodacs.com" target="_blank">Avoda Consulting Services, LLC</a>. The source code is licensed <a href="http://opensource.org/licenses/mit-license.php" target="_blank">MIT</a>.
+          p
+            a(class='icon', href='https://github.com/avodacs/request-mirror', target='_blank')
+              i(class='fa fa-github')

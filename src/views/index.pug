@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  //- Page header
+  section(class='hero is-medium is-info is-bold margin-bottom-1')
+    div(class='hero-body has-text-centered')
+      div(class='container')
+        img(src='/images/logo.png', class='logo')
+        h1(class='title') Request Mirror
+        h2(class='subtitle') Request Mirror allows you to submit HTTP requests and view the header, query parameters, and body of the request.
+
+  //- Create Mirror button
+  div(class='container has-text-centered')
+    a(class='button is-info is-outlined is-medium' href='/inspect')
+      i(class='fa fa-plus-circle margin-right-1')
+      span Create Mirror

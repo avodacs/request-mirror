@@ -1,0 +1,73 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+/* Text Styles */
+.bold {
+  font-weight: bold;
+}
+
+.pre {
+  font-family: 'Courier New', monospace;
+  overflow-wrap: break-word;
+}
+
+/* Margin Styles */
+.margin-right-1 {
+  margin-right: 1em;
+}
+
+.margin-bottom-1 {
+  margin-bottom: 1em;
+}
+
+.margin-top-1 {
+  margin-top: 1em;
+}
+
+.margin-bottom-2 {
+  margin-bottom: 2em;
+}
+
+.margin-top-2 {
+  margin-top: 2em;
+}
+
+/* Table Styles */
+table {
+  table-layout: fixed;
+}
+
+table td {
+  word-wrap: break-word;
+}
+
+.is-quarter {
+  width: 25%;
+}
+
+/* Request Header */
+.request-header {
+  background-color: hsl(0, 0%, 96%);
+  padding: 1em;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Images */
+.logo {
+  width: 150px;
+}
+
+/* Footer */
+#wrapper {
+  flex: 1;
+}
+
+.footer {
+    padding: 1em;
+}
