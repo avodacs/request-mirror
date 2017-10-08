@@ -20,7 +20,7 @@ router.get(/\/(.{8})/, function (req, res, next) {
   if (accept === 'application/json') {
     db.get(id, function (data) {
       // Purge headers that we don't want to show
-      let hiddenHeaders = ['x-forwarded-port', 'x-forwarded-for', 'connection'];
+      let hiddenHeaders = ['x-forwarded-port', 'x-forwarded-for', 'connection', 'x-forwarded-proto'];
 
       data.forEach(function (record) {
         let keys = Object.keys(record.headers);
