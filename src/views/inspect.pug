@@ -8,14 +8,25 @@ block content
         h2(class='subtitle') Token #{token}
 
   //- URL textbox
-  div(class='container margin-bottom-2 margin-top-2')
+  div(class='container margin-top-2')
     div(class='field has-addons')
       div(class='control has-icons-left is-expanded')
-        input(id='logUrl', class='input is-fullwidth', type='text', value=url, readonly)
+        input(id='logUrlSecure', class='input is-fullwidth', type='text', value='https://' + url, readonly)
         span(class='icon is-small is-left')
           i(class='fa fa-link')
       div(class='control')
-        a(id='copyBtn' class='button is-info', data-clipboard-target='#logUrl')
+        a(id='copyBtn' class='button is-info', data-clipboard-target='#logUrlSecure')
+          i(class='fa fa-copy margin-right-1')
+          span Copy
+
+  div(class='container margin-bottom-2 margin-top-1')
+    div(class='field has-addons')
+      div(class='control has-icons-left is-expanded')
+        input(id='logUrlInsecure', class='input is-fullwidth', type='text', value='http://' + url, readonly)
+        span(class='icon is-small is-left')
+          i(class='fa fa-link')
+      div(class='control')
+        a(id='copyBtn' class='button is-info', data-clipboard-target='#logUrlInsecure')
           i(class='fa fa-copy margin-right-1')
           span Copy
 
