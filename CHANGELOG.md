@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [1.0.1] - UNRELEASED
 ### Changed
 - `x-forwarded-port`, `x-forwarded-for`, and `connection` headers are not displayed on inspection, to prevent showing headers added by HAProxy.
+- Updated favicon
 
 ## [1.0.0] - 2017-10-08
 ### Added
