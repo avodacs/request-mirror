@@ -1,6 +1,6 @@
 {
   "name": "request-mirror",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Request Mirror HTTP Request Logging Application",
   "scripts": {
     "start": "NODE_ENV=production node ./src/bin/www",
