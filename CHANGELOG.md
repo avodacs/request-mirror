@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 - Dropped direct usage of `clipboard.js` for copying the log URL, using vue-clipboard2 instead
 - HTTP and HTTPS links are toggled from dropdown
+- Updated README
 
 
 ## [1.0.2] - 2017-10-08
