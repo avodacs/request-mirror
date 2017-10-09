@@ -52,5 +52,14 @@ let app = new Vue({
           // console.error(error);
         });
     }
+  },
+  filters: {
+    formatDate: function(value) {
+      if (!value) {
+        return '';
+      }
+
+      return new Date(value).toUTCString();
+    }
   }
 });

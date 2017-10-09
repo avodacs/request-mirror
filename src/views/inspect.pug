@@ -52,7 +52,7 @@ block content
               span(class='pre bold') {{ request.url }}
           div(class='level-item level-right')
             div(class='heading has-text-right')
-              p {{ request.createdAt }}
+              p {{ request.createdAt | formatDate }}
               p {{ request.clientIp }}
 
         //- Headers
