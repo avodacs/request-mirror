@@ -1,2 +1,14 @@
-.git
+assets
 node_modules
+.dockerignore
+.editorconfig
+.eslintrc
+.git
+.gitattributes
+.gitignore
+.npmrc
+CHANGELOG.md
+CONTRIBUTING.md
+Dockerfile
+LICENSE.md
+README.md
