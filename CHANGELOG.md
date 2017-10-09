@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added features to index
 - No entries helper text
 - Basic contributing guide
+- Data expires after 4 hours
 
 ### Changed
 - Dropped direct usage of `clipboard.js` for copying the log URL, using vue-clipboard2 instead

@@ -11,7 +11,6 @@ router.all(/\/(.{8})/, function(req, res, next) {
     id,
     `${req.protocol}://${req.get('host')}${req.originalUrl}`,
     req.headers['x-forwarded-for'] || req.connection.remoteAddress,
-    moment.utc().toString(),
     req.method,
     req.headers,
     req.query,

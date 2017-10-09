@@ -1,34 +1,32 @@
 const Datastore = require('nedb');
 
-const db = new Datastore();
+const db = new Datastore({
+  timestampData: true
+});
 
 function setup() {
+  // Data expires after 4 hours
   db.ensureIndex({
-    fieldName: 'id',
-    expireAfterSeconds: 15
+    fieldName: 'createdAt',
+    expireAfterSeconds: 14400
   });
 }
 
 function get(id, cb) {
-  setup();
-
   db.find({
     id: id
   }).sort({
-    timestamp: -1
+    createdAt: -1
   }).exec(function (err, data) {
     cb(data);
   });
 }
 
-function insert(id, url, clientIp, timestamp, method, headers, parameters, body, cb) {
-  setup();
-
+function insert(id, url, clientIp, method, headers, parameters, body, cb) {
   let data = {
     id: id,
     url: url,
     clientIp: clientIp,
-    timestamp: timestamp,
     method: method,
     headers: headers,
     parameters: parameters,

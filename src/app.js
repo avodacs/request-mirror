@@ -12,6 +12,8 @@ const log = require('./routes/log.js');
 
 const app = express();
 
+db.setup();
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');

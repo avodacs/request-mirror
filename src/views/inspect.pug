@@ -24,7 +24,7 @@ block content
             span Copy
 
     //- Request Entries
-    div(class='container box')
+    div(class='container')
       div(v-if='!requests')
         h1(class='header') No entries for this token.  Get started using one of the commands below:
         table(class='table is-fullwidth is-narrow margin-top-2')
@@ -52,7 +52,7 @@ block content
               span(class='pre bold') {{ request.url }}
           div(class='level-item level-right')
             div(class='heading has-text-right')
-              p {{ request.timestamp }}
+              p {{ request.createdAt }}
               p {{ request.clientIp }}
 
         //- Headers
@@ -81,6 +81,11 @@ block content
               tr(v-for='body in Object.keys(request.body)')
                 td(class='is-quarter') {{ body }}
                 td(class='pre') {{ request.body[body] }}
+
+      //- Expiration warning
+      div(class='tag is-light')
+        i(class='fa red-icon fa-warning margin-right-1')
+        span Data expires after 4 hours
 
     input(id='token', type='text', value=token, class='hidden')
     input(id='url', type='text', value=url, class='hidden')
