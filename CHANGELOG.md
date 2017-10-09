@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - Added features to index
 - No entries helper text
+- Basic contributing guide
+
 ### Changed
 - Dropped direct usage of `clipboard.js` for copying the log URL, using vue-clipboard2 instead
 - HTTP and HTTPS links are toggled from dropdown
