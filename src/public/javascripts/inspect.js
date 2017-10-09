@@ -6,7 +6,7 @@ let app = new Vue({
     url: null
   },
   computed: {
-    fullUrl: function() {
+    fullUrl: function () {
       return `${this.protocol}://${this.url}`;
     }
   },
@@ -44,7 +44,9 @@ let app = new Vue({
           }
         })
         .then(function (response) {
-          self.requests = response.data;
+          if (response.data.length > 0) {
+            self.requests = response.data;
+          }
         })
         .then(function (error) {
           // console.error(error);

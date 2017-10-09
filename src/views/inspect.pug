@@ -24,7 +24,24 @@ block content
             span Copy
 
     //- Request Entries
-    div(class='container')
+    div(class='container box')
+      div(v-if='!requests')
+        h1(class='header') No entries for this token.  Get started using one of the commands below:
+        table(class='table is-fullwidth is-narrow margin-top-2')
+          thead
+            tr
+              th(class='is-quarter') Description
+              th Command
+          tbody
+            tr
+              td curl <span class='tag is-success'>GET<span>
+              td(class='pre') curl -X "GET" "{{ fullUrl }}"
+            tr
+              td curl <span class='tag is-warning'>POST<span>
+              td(class='pre') curl -X "POST" "{{ fullUrl }}"
+            tr
+              td curl <span class='tag is-danger'>DELETE<span>
+              td(class='pre') curl -X "DELETE" "{{ fullUrl }}"
 
       //- Request Template
       div(class='box', v-if='requests', v-for='request in requests')
