@@ -1,9 +1,14 @@
-var clipboard = new Clipboard('#copyBtn');
-
 let app = new Vue({
   el: '#app',
   data: {
-    requests: null
+    requests: null,
+    protocol: 'https',
+    url: null
+  },
+  computed: {
+    fullUrl: function() {
+      return `${this.protocol}://${this.url}`;
+    }
   },
   mounted() {
     this.loadinspect();
@@ -29,6 +34,7 @@ let app = new Vue({
       let self = this;
 
       let token = document.getElementById('token').value;
+      this.url = document.getElementById('url').value;
 
       axios({
           method: 'get',
