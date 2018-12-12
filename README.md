@@ -1,6 +1,7 @@
 # Request Mirror
 
 [![](https://images.microbadger.com/badges/image/avodacs/request-mirror.svg)](https://microbadger.com/images/avodacs/request-mirror "Get your own image badge on microbadger.com") ![](https://img.shields.io/github/downloads/avodacs/request-mirror/total.svg?maxAge=2592000) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Known Vulnerabilities](https://snyk.io/test/github/avodacs/request-mirror/badge.svg)](https://snyk.io/test/github/avodacs/request-mirror)
 
 
 HTTP request viewer, available at [https://rm.avodacs.com](https://rm.avodacs.com), or locally using [Docker](https://hub.docker.com/r/avodacs/request-mirror/).
