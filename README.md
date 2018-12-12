@@ -3,7 +3,7 @@
 [![](https://images.microbadger.com/badges/image/avodacs/request-mirror.svg)](https://microbadger.com/images/avodacs/request-mirror "Get your own image badge on microbadger.com") ![](https://img.shields.io/github/downloads/avodacs/request-mirror/total.svg?maxAge=2592000) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
-HTTP request viewer, available at [https://requestmirror.com](https://requestmirror.com), or locally using [Docker](https://hub.docker.com/r/avodacs/request-mirror/).
+HTTP request viewer, available at [https://rm.avodacs.com](https://rm.avodacs.com), or locally using [Docker](https://hub.docker.com/r/avodacs/request-mirror/).
 
 ## Features
 
@@ -14,7 +14,7 @@ HTTP request viewer, available at [https://requestmirror.com](https://requestmir
 
 ## Check out our hosted version
 
-We host the latest version of Request Mirror at [https://requestmirror.com](https://requestmirror.com).  Data expires after 4 hours, and the service is freely available for individuals and organizations.
+We host the latest version of Request Mirror at [https://rm.avodacs.com](https://rm.avodacs.com).  Data expires after 4 hours, and the service is freely available for individuals and organizations.
 
 ## Run in development mode
 
