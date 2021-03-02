@@ -16,7 +16,7 @@
     "moment": "^2.22.0",
     "morgan": "^1.9.1",
     "nedb": "^1.8.0",
-    "pug": "^2.0.3",
+    "pug": "^3.0.1",
     "serve-favicon": "^2.5.0"
   },
   "devDependencies": {}
